@@ -30,15 +30,13 @@ public class Caixa {
 				switch (escolha) {
 				case 1: 
 					System.out.println("Digite quanto será sacado:");
-					BigDecimal saque = scanner.nextBigDecimal();
-					corr.sacarCorr(saque);
-					System.out.println("Valor restante: " + corr.saldoCorr);
+					corr.sacarCorr(scanner.nextBigDecimal());
+					System.out.println("Valor restante: " + corr.getSaldoCorr());
 				break;
 			
 				case 2:
 					System.out.println("Digite quanto será depositado:");
-					BigDecimal depo = scanner.nextBigDecimal();
-					corr.depositarCorr(depo);
+					corr.depositarCorr(scanner.nextBigDecimal());
 					System.out.println("Saldo: " + corr.saldoCorr);
 				break;
 				
@@ -63,22 +61,19 @@ public class Caixa {
 				switch (escolha2) {
 				case 1: 
 					System.out.println("Digite quanto será sacado:");
-					BigDecimal saque = scanner.nextBigDecimal();
-					pou.sacarPou(saque);
+					pou.sacarPou(scanner.nextBigDecimal());
 					System.out.println("Valor restante: " + pou.saldoPou);
 					break;
 		
 				case 2:
 					System.out.println("Digite quanto será depositado:");
-					BigDecimal depo = scanner.nextBigDecimal();
-					pou.depositarPou(depo);
+					pou.depositarPou(scanner.nextBigDecimal());
 					System.out.println("Saldo: " + pou.saldoPou);
 					break;
 			
 				case 3:
 					System.out.println("Digite seu Rendimento: ");
-					BigDecimal renda = scanner.nextBigDecimal();
-					pou.render(renda);
+					pou.render(scanner.nextBigDecimal());
 					System.out.println("Rendimento do mês: " + pou.saldoPou);
 				break;
 				

@@ -2,6 +2,9 @@ package Conta;
 
 import java.math.BigDecimal;
 
+/**
+ * 
+ */
 public abstract class Conta implements IConta{
 	
 	 private static final int AGENCIA_PADRAO = 1;
@@ -49,20 +52,46 @@ public abstract class Conta implements IConta{
 		System.out.println(String.format("Número: %d", this.numero));
 		System.out.println(String.format("Saldo: %.2f", this.saldoPou));
 	}
-		
+
+
 	public int getAgencia() {
 		return agencia;
 	}
+
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
 
 	public int getNumero() {
 		return numero;
 	}
 
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+
 	public BigDecimal getSaldoCorr() {
 		return saldoCorr;
-	}	
-	
+	}
+
+
+	public void setSaldoCorr(BigDecimal saldoCorr) {
+		this.saldoCorr = saldoCorr;
+	}
+
+
 	public BigDecimal getSaldoPou() {
 		return saldoPou;
 	}
+
+
+	public void setSaldoPou(BigDecimal saldoPou) {
+		this.saldoPou = saldoPou;
+	}
+		
+	
 }
